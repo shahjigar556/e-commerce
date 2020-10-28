@@ -5,7 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-
+import ExitToAppIcon from '@material-ui/icons/ExitToApp'
 
 import logo from '../logo.svg';
 import { Link } from 'react-router-dom';
@@ -14,6 +14,7 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    width:'100%'
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -22,6 +23,10 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 }));
+const btnStyle={
+  cursor:'pointer',
+  textDecoration:'none'
+}
 
 export default function ButtonAppBar() {
   const classes = useStyles();
@@ -39,13 +44,13 @@ export default function ButtonAppBar() {
           </Typography>
           <div className="mr-3">
           <Link to='/login'>
-              <Button color="inherit">Login</Button>
+              <Button style={btnStyle}startIcon={<ExitToAppIcon />} variant="contained" color="secondary">Login</Button>
           </Link>
           </div>
 
           <div className="mr-3">
           <Link to='/cart'>  
-             <Button startIcon={<ShoppingCartIcon/>} variant="contained" color="secondary">Cart</Button>
+             <Button style={btnStyle} startIcon={<ShoppingCartIcon/>} variant="contained" color="secondary">Cart</Button>
           </Link>
           </div>
         </Toolbar>
