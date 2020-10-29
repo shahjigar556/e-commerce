@@ -2,7 +2,7 @@ import React from 'react'
 import {useContext} from 'react';
 import {useState,useEffect} from 'react';
 import {ProductContext} from '../components/ProductContext';
-import pixel from '../pixel.jpg'
+
 
 export default function Details(props) {
     const id=props.match.params.id // id ot product clicked
