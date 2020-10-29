@@ -1,7 +1,7 @@
 import React from 'react'
 import Product from '../components/Product';
 import {useState,useEffect} from 'react';
-import {storeProducts} from '../data';
+
 import Grid from '@material-ui/core/Grid';
 import Title from '../components/Title';
 import {ProductContext} from '../components/ProductContext';

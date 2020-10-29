@@ -22,10 +22,10 @@ function App() {
         <Switch>
            <ProductProvider>
            <Route exact path='/' component={ProductList} />
-           <Route excat path='/details' component={Details} />
-           <Route path='/cart' component={Cart} />
-           <Route path='/login' component={Login} />
-           <Route component={Default} />
+           <Route excat path='/details/:id' component={Details} />
+           <Route excat path='/cart' component={Cart} />
+           <Route excat path='/login' component={Login} />
+           <Route excat component={Default} />
            </ProductProvider>
         </Switch>
      
