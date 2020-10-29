@@ -2,6 +2,7 @@ import React from 'react'
 import {useContext} from 'react';
 import {useState,useEffect} from 'react';
 import {ProductContext} from '../components/ProductContext';
+import pixel from '../pixel.jpg'
 
 export default function Details(props) {
     const id=props.match.params.id // id ot product clicked
@@ -15,8 +16,9 @@ export default function Details(props) {
        setProduct(ans[0]);
      },[])
     const addToCart=()=>{  // method to know if the item has been added to cart
+        let flag=0
         console.log('in event add to cart');
-        product.inCart=true;
+        product.inCart=!product.inCart;
         setProducts(products.map(sproduct=>{
             if(sproduct.id==product.id)
             {
@@ -34,7 +36,8 @@ export default function Details(props) {
         }
     }
  
-     console.log(product);
+     console.log("product is ")
+     console.log(product)
      const url=product.img;
      console.log(url)
     return (

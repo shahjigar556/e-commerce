@@ -16,10 +16,10 @@ export default function Product({product}) {
                     {product.title}
                  </h3>
                  <img className="img-fluid" src={product.img} alt="img"></img>
-                 <h4>
+                 <h4 className="text-center">
                     {product.company}
                  </h4>
-                 <h4>
+                 <h4 className="text-center text-primary">
                      {product.price} $
                  </h4>
                  <center>
