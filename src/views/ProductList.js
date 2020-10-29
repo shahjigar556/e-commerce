@@ -4,9 +4,10 @@ import {useState,useEffect} from 'react';
 import {storeProducts} from '../data';
 import Grid from '@material-ui/core/Grid';
 import Title from '../components/Title';
-
+import {ProductContext} from '../components/ProductContext';
+import {useContext} from 'react';
 export default function ProductList() {
-    const [products,setProducts]=useState(storeProducts);// creating state of products
+    const [products,setProducts]=useContext(ProductContext);// creating state of products
     console.log(products);
     return (
      <div className="container">
