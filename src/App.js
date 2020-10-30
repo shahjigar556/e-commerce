@@ -27,7 +27,7 @@ function App() {
            <Route excat path='/details/:id' component={Details} />
            <Route excat path='/cart' component={Cart} />
            <Route excat path='/login' component={Login} />
-           <Route excat path='/compare/:id' component={Compare} />
+           <Route excat path='/compare/:id/:company' component={Compare} />
            </ProductProvider>
         </Switch>
      

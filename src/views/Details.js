@@ -56,7 +56,7 @@ export default function Details(props) {
                          <h3 className="text-center mt-2">{product.company}</h3>
                          <h3 className="text-danger text-center mt-2">{product.price} $</h3>
                          <p>{product.info}</p>
-                         <button onClick={addToCart}>Add</button>
+                         <Button variant="contained" color="secondary" onClick={addToCart}>Add</Button>
                          
                          <br />
                   <Button variant="contained" color="secondary" className="text-center mb-3 mt-2">
