@@ -42,6 +42,7 @@ export default function Details(props) {
        textDecoration:'none',
        color:'black'
    }
+   const imgUrl=`/${product.img}`
     return (
         
         <div>
@@ -49,7 +50,7 @@ export default function Details(props) {
              <div className="container">
                  <div className="row">
                      <div className='col-xs-12 col-md-6'>
-                         <img className="img-fluid" alt={product.title} src="https://i.gadgets360cdn.com/products/large/1556860999_635_google_pixel_3a.jpg"></img>      
+                         <img className="img-fluid" alt={product.title} src={imgUrl}></img>      
                     </div>
                      <div className="col-xs-12 col-md-6">
                          <h2 className="text-center text-success mt-2">{product.title}</h2>

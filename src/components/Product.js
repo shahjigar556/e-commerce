@@ -9,13 +9,14 @@ export default function Product({product}) {
         textDecoration:'none',
         color:'black'
     }
+    const imgUrl=`/${product.img}`
     return (
         <Grid item xs={12} sm={6} md={4} >
              <Paper >
                  <h3>
                     {product.title}
                  </h3>
-                 <img className="img-fluid" src={product.img} alt="img"></img>
+                 <img className="img-fluid" src={imgUrl} alt="img"></img>
                  <h4 className="text-center">
                     {product.company}
                  </h4>

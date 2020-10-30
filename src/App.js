@@ -15,6 +15,7 @@ import {ProductProvider} from './components/ProductContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Compare from './views/Compare';
+import PriceCompare from './views/PriceCompare';
 
 function App() {
   
@@ -28,6 +29,7 @@ function App() {
            <Route excat path='/cart' component={Cart} />
            <Route excat path='/login' component={Login} />
            <Route excat path='/compare/:id/:company' component={Compare} />
+           <Route excat path='/price/:price' component={PriceCompare} />
            </ProductProvider>
         </Switch>
      
