@@ -15,7 +15,7 @@ export default function PriceCompare(props) {
     console.log(rangeProducts)
     return (
         <div>
-            <h2>Hello From Price Compare</h2>
+            <h2 className="text-center text-success">Price Compare</h2>
             <Grid container spacing={2}>
                 {rangeProducts.map(product=><Product id={product.id} product={product}/>)}
             </Grid>
