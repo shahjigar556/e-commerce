@@ -14,6 +14,8 @@ import {useContext} from 'react';
 import {ProductProvider} from './components/ProductContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Compare from './views/Compare';
+
 function App() {
   
   return (
@@ -25,7 +27,7 @@ function App() {
            <Route excat path='/details/:id' component={Details} />
            <Route excat path='/cart' component={Cart} />
            <Route excat path='/login' component={Login} />
-          
+           <Route excat path='/compare/:id' component={Compare} />
            </ProductProvider>
         </Switch>
      

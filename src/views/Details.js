@@ -2,12 +2,14 @@ import React from 'react'
 import {useContext} from 'react';
 import {useState,useEffect} from 'react';
 import {ProductContext} from '../components/ProductContext';
+import Button from '@material-ui/core/Button';
+import {Link} from 'react-router-dom';
 
 
 export default function Details(props) {
     const id=props.match.params.id // id ot product clicked
     console.log(id)
-    const [product,setProduct]=useState({});
+    const [product,setProduct]=useState({});   // state for storing data of the current product
     const [products,setProducts]=useContext(ProductContext);
 
      useEffect(()=>{
@@ -16,7 +18,7 @@ export default function Details(props) {
        setProduct(ans[0]);
      },[])
     const addToCart=()=>{  // method to know if the item has been added to cart
-        let flag=0
+    
         console.log('in event add to cart');
         product.inCart=!product.inCart;
         setProducts(products.map(sproduct=>{
@@ -35,11 +37,11 @@ export default function Details(props) {
             alert('Item already added');
         }
     }
- 
-     console.log("product is ")
-     console.log(product)
-     const url=product.img;
-     console.log(url)
+   const compareUrl=`/compare/${product.id}/${product.company}`// url to compare page
+   const LinkStyle={
+       textDecoration:'none',
+       color:'black'
+   }
     return (
         
         <div>
@@ -55,7 +57,11 @@ export default function Details(props) {
                          <h3 className="text-danger text-center mt-2">{product.price} $</h3>
                          <p>{product.info}</p>
                          <button onClick={addToCart}>Add</button>
-                         <p>{url}</p>
+                         
+                         <br />
+                  <Button variant="contained" color="secondary" className="text-center mb-3 mt-2">
+                     <Link to={compareUrl} style={LinkStyle}>Compare</Link>
+                 </Button>
                      </div>
                  </div>
              </div>
