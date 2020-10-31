@@ -40,28 +40,39 @@ export default function ButtonAppBar() {
            <div className="col-sm-6 col-xs-12">
                 <div className='row'>
                      <div className="col-xs-6 ml-5 mt-2 mb-2">
+                      
                        <Link to='/' style={LinkStyle}>
                          <img src={logo} alt="logo"></img>
                        </Link>
+
+                    
                      </div>
                      <div className="col-xs-6 ml-5 mt-2 mb-2">
+                       
                         <Link to='/' style={LinkStyle}>
                             <h2 className="text-warning font-weight-bold">Products</h2>
                         </Link>
+
                      </div>
                 </div>
            </div>
            <div className='col-sm-6 col-xs-12 ml-auto'>
               <div className="row">
                   <div className="col-xs-6 mr-3 ml-5 mt-2 mb-2">
+                  
+
                   <Link to='/login' style={LinkStyle}>
                      <Button style={btnStyle}startIcon={<ExitToAppIcon />} variant="contained" color="secondary">Login</Button>
                  </Link>
+                  
                   </div>
                   <div className="col-xs-6 mt-2 ml-2 mb-2">
+                    
                    <Link to='/cart' style={LinkStyle}>  
                       <Button style={btnStyle} startIcon={<ShoppingCartIcon/>} variant="contained" color="secondary">Cart</Button>
                    </Link>
+
+                   
                   </div>
 
               </div>

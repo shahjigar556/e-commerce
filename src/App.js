@@ -16,7 +16,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Compare from './views/Compare';
 import PriceCompare from './views/PriceCompare';
-
+import ProtectedRoute from './components/ProtectedRoute'
 function App() {
   
   return (
@@ -25,11 +25,12 @@ function App() {
         <Switch>
            <ProductProvider>
            <Route exact path='/' component={ProductList} />
-           <Route excat path='/details/:id' component={Details} />
-           <Route excat path='/cart' component={Cart} />
-           <Route excat path='/login' component={Login} />
-           <Route excat path='/compare/:id/:company' component={Compare} />
-           <Route excat path='/price/:price' component={PriceCompare} />
+           <ProtectedRoute exact path='/details/:id' component={Details} />
+           <ProtectedRoute exact path='/cart' component={Cart} />
+           <Route exact path='/login' component={Login} />
+           <ProtectedRoute exact path='/compare/:id/:company' component={Compare} />
+           <ProtectedRoute exact path='/price/:price' component={PriceCompare} />
+           
            </ProductProvider>
         </Switch>
      
