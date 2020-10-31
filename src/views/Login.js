@@ -30,6 +30,8 @@ export default function Login(props) {
       if(user.length==0)// no valid credentials
       {
           alert('Enter valid credentials');
+          setName(' ')
+          setPassword(' ')
       }
       if (user.length===1) //user must be authenticated
       {
