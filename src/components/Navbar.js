@@ -1,28 +1,14 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+
 import Button from '@material-ui/core/Button';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp'
 
 import logo from '../logo.svg';
 import { Link } from 'react-router-dom';
+import fakeAuth from '../Auth';
 
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    width:'100%'
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
-}));
 const btnStyle={
   cursor:'pointer',
   textDecoration:'none'
@@ -31,8 +17,10 @@ const LinkStyle={
   textDecoration:'none'
 }
 
+
+
 export default function ButtonAppBar() {
-  const classes = useStyles();
+ 
 
   return (
     <div className='container-fluid bg-primary'>
@@ -58,7 +46,7 @@ export default function ButtonAppBar() {
            </div>
            <div className='col-sm-6 col-xs-12 ml-auto'>
               <div className="row">
-                  <div className="col-xs-6 mr-3 ml-5 mt-2 mb-2">
+                  <div className="col-xs-6 mr-3 ml-5 mt-2 mb-2 " >
                   
 
                   <Link to='/login' style={LinkStyle}>
