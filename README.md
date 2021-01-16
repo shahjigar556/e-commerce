@@ -3,3 +3,6 @@
 
 <p>Applied The Knowledge of React and React context Hooks to build an Functional E-commerce website</p>
 
+<center>
+<img src="Screenshot (277).png" height=500px width=500px>
+</center>
