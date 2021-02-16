@@ -11,8 +11,8 @@ import users from '../UserData';
 
 
 export default function Login(props) {
-  const [name,setName]=useState("");
-  const [password,setPassword]=useState("")
+  const [name,setName]=useState("JigarShah");
+  const [password,setPassword]=useState("jigar123")
   const [RedirectToReferrer,setRedirectToReferrer]=useState(false);
 
   const handleNameChange=(e)=>{
