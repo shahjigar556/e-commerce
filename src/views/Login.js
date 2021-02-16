@@ -39,7 +39,7 @@ export default function Login(props) {
           fakeAuth.login(()=>{
               setRedirectToReferrer(true);
           })
-        // changing the state of loggedIn from True to false
+        // changing the state of loggedIn from False to True
           const id=user[0].id;
           for(let i=0;i<users.length;i++)
           {
